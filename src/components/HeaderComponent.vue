@@ -1,21 +1,109 @@
 <template>
   <header>
-    header
+    <div class="container flex-row">
+      <div class="logo flex-row">
+        <a href="#" class="flex-row" @click="toggleMenu = false">
+          <img src="../assets/my-logo.svg" alt="logo" class="w-100">
+        </a>
+      </div>
+      <nav>
+        <div class="menu">
+          <i @click="toggleMenu = !toggleMenu" :class="toggleMenu ? 'rotate-45' : ''" class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </div>
+    <div class="menu-extended" :class="toggleMenu ? 'top-0' : ''" >
+      <a href="">About me</a>
+      <a href="">Projects</a>
+    </div>
+    <div class="mail-me">
+      <div class="container">
+        <a href="mailto:stefanopiotti472@gmail.com" >
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
   </header>
 </template>
 
 <script>
 export default {
-    name: 'HeaderComponent'
+    name: 'HeaderComponent',
+    data() {
+      return {
+        toggleMenu: false,
+      }
+    }
 }
 </script>
 
 <style  scoped lang="scss">
 header{
+  background: transparent;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 2;
+  &>div{
+    justify-content: space-between;
+  }
+  .logo{
+    width: 1.5rem;
+    cursor: pointer;
+    &:hover{
+      opacity: 0.6;
+    }
+  }
+  i{
+    font-size: 1.75rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover{
+      opacity: 0.6;
+      transform: rotate(45deg);
+    }
+  }
+  .menu-extended{
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 60px;
+    padding-left: 120px;
+    background: #EECF8A;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: center;
+    z-index: -1;
+    transition: all .3s ease;
+    a{
+      font-size: 7rem;
+      &:first-child{
+        margin-bottom: 2rem;
+      }
+      &:hover{
+        opacity: 0.6;
+      }
+    }
+  }
+  .mail-me{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    .container{
+      text-align: right;
+    }
+  }
+  .top-0 {
+    top: 0;
+  }
+  .rotate-45{
+    transform: rotate(45deg);
+  }
 }
 
 </style>

@@ -1,9 +1,18 @@
 <template>
   <div id="home" >
     <div class="container">
-      <h1>Hey what's up? I'm Stefano.</h1>
-      <p class="subtitle">👋 Welcome to my Portfolio!</p>
+      <h1 class="first-row">Hey what's up?</h1>
+      <h1 class="last-row">I'm Stefano.</h1>
+      <p class="subtitle">
+        <!-- <span>
+          I'm a Jr Web Developer. 
+        </span> -->
+        <span>
+          Welcome to my Portfolio!
+        </span>
+      </p>
     </div>
+    <img src="../assets/divider.svg" alt="page-down" class="arrow-down">
   </div>
 </template>
 
@@ -18,21 +27,24 @@ export default {
 #home{
   // // home variables
   --bg-home: #CFFFE5;
-  --typewriterSpeed: 7s;
-  --typewriterCharacters: 27;
+  --typewriterSpeedTop: 4s;
+  --typewriterCharactersTop: 14;
+  --typewriterSpeedBottom: 3s;
+  --typewriterCharactersBottom: 12;
 
   height: 100vh;
   width: 100%;
   background: var(--bg-home);
   display: flex;
   align-items: center;
+  position: relative;
 
   h1 {
-    font-size: clamp(1rem, 3vw + 1rem, 4rem);
+    font-size: 5.5rem;
     font-family: "PT Mono", monospace;
     position: relative;
     width: max-content;
-    margin-bottom: 1em;
+    // margin-bottom: 1em;
   }
 
   h1::before,
@@ -45,25 +57,65 @@ export default {
     left: 0;
   }
 
-  h1::before {
+  .first-row::before {
     background: var(--bg-home);
-    animation: typewriter var(--typewriterSpeed) steps(var(--typewriterCharacters)) 1s forwards;
+    animation: typewriter var(--typewriterSpeedTop) 
+                steps(var(--typewriterCharactersTop)) 
+                // delay
+                1s forwards;
   }
 
-  h1::after {
+  .first-row::after {
     width: 0.125em;
-    background: black;
-    animation: typewriter var(--typewriterSpeed)  steps(var(--typewriterCharacters)) 1s forwards,
-      blink 750ms steps(var(--typewriterCharacters)) infinite;
+    background: transparent;
+    animation: typewriter var(--typewriterSpeedTop)  
+                  steps(var(--typewriterCharactersTop)) 
+                  // delay
+                  1s,
+              blink 750ms steps(var(--typewriterCharactersTop)) 
+                  // how many times?
+                  6;
+  }
+
+  .last-row::before {
+    background: var(--bg-home);
+    animation: typewriter var(--typewriterSpeedBottom) 
+                  steps(var(--typewriterCharactersBottom)) 
+                  // delay
+                  calc(var(--typewriterSpeedTop) + 1.5s) forwards;
+  }
+
+  .last-row::after {
+    width: 0.125em;
+    background: transparent;
+    animation: typewriter var(--typewriterSpeedBottom)  
+                  steps(var(--typewriterCharactersBottom)) 
+                  calc(var(--typewriterSpeedTop) + 1.5s) forwards,
+              blink 750ms steps(var(--typewriterCharactersBottom)) 
+                  // delay
+                  calc(var(--typewriterSpeedTop) + 1.5s) 
+                  // how many times?
+                  infinite;
   }
 
   .subtitle {
-    color: hsl(0 0% 0% / 0.7);
-    font-size: clamp(0.8rem, 3vw + 0.8rem, 2rem);
+    margin-top: 2rem;
+    color: rgba(#000 , 0.7);
+    font-size: clamp(0.8rem, 3vw + 0.8rem, 2.5rem);
     text-align: left;
+    display: flex;
+    flex-direction: column;
     opacity: 0;
     // transform: translateY(0.5em);
-    animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 1s) forwards;
+    animation: fadeInUp 2s ease calc(var(--typewriterSpeedTop) + var(--typewriterSpeedBottom) + 2s) forwards;
+  }
+
+  .arrow-down{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 1.25rem;
   }
 
   @keyframes typewriter {
@@ -74,7 +126,7 @@ export default {
 
   @keyframes blink {
     to {
-      background: transparent;
+      background: black;
     }
   }
 

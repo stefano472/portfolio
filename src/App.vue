@@ -3,8 +3,8 @@
 
     <HeaderComponent/>
     <HomeComponent/>
-    <!-- <ProjectsComponent/>
-    <AboutComponent/> -->
+    <!-- <ProjectsComponent/> -->
+    <AboutComponent/>
 
   </div>
 </template>
@@ -13,7 +13,7 @@
 import HeaderComponent from './components/HeaderComponent.vue'
 import HomeComponent from './components/HomeComponent.vue'
 // import ProjectsComponent from './components/ProjectsComponent.vue'
-// import AboutComponent from './components/AboutComponent.vue'
+import AboutComponent from './components/AboutComponent.vue'
 
 export default {
   name: 'App',
@@ -21,7 +21,7 @@ export default {
     HeaderComponent,
     HomeComponent,
     // ProjectsComponent,
-    // AboutComponent
+    AboutComponent
   }
 }
 </script>
@@ -37,6 +37,11 @@ export default {
 
 ul {
     list-style: none
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
 }
 
 .container {
@@ -55,8 +60,12 @@ ul {
     flex-direction: column;
 }
 
+.w-100{
+  width: 100%;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
