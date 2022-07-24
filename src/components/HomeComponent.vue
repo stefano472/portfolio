@@ -1,5 +1,5 @@
 <template>
-  <div id="home" >
+  <section id="home" >
     <div class="container">
       <h1 class="first-row">Hey what's up?</h1>
       <h1 class="last-row">I'm Stefano.</h1>
@@ -13,7 +13,7 @@
       </p>
     </div>
     <img src="../assets/divider.svg" alt="page-down" class="arrow-down">
-  </div>
+  </section>
 </template>
 
 <script>
@@ -116,7 +116,7 @@ export default {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    margin-bottom: 1.25rem;
+    margin-bottom: 3rem;
   }
 
   @keyframes typewriter {

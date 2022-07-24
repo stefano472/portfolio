@@ -45,7 +45,7 @@ a{
 }
 
 .container {
-    width: min((100% - 3rem), 1300px);
+    width: min((100% - 3rem), 1270px);
     margin-inline: auto;
     padding: 1.25rem 0;
 }
@@ -68,7 +68,7 @@ a{
   font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  // text-align: center;
   color: #2c3e50;
   // margin-top: 60px;
 }

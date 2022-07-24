@@ -14,16 +14,27 @@
     </div>
     <div class="menu-extended" :class="toggleMenu ? 'top-0' : ''" >
       <div class="container">
-        <a href="">About me</a>
-        <a href="">Projects</a>
+        <a href="">&lt; About me /&gt;</a>
+        <a href="">&lt; Projects /&gt;</a>
       </div>
     </div>
     <div class="mail-me">
-      <div class="container">
-        <a href="mailto:stefanopiotti472@gmail.com" >
-          <i class="fa-solid fa-envelope"></i>
-        </a>
-      </div>
+      <ul class="container">
+        <li>
+          <a href="https://github.com/stefano472" target="_blank">GITHUB</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/stefano-piotti-950322237/" target="_blank">LINKEDIN</a>
+        </li>
+        <li>
+          <a href="mailto:stefanopiotti472@gmail.com" >EMAIL</a>
+        </li>   
+        <!-- <li>
+          <a href="mailto:stefanopiotti472@gmail.com" >
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </li>    -->
+      </ul>
     </div>
   </header>
 </template>
@@ -41,6 +52,11 @@ export default {
 
 <style  scoped lang="scss">
 header{
+  .container{
+    width: min((100% - 3rem), 1570px);
+    margin-inline: auto;
+    padding: 3rem 0;
+  }
   background: transparent;
   position: fixed;
   top: 0;
@@ -82,6 +98,7 @@ header{
     z-index: -1;
     transition: all .3s ease;
     .container{
+      width: min((100% - 3rem), 1270px);
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -102,8 +119,25 @@ header{
     position: fixed;
     bottom: 0;
     left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     .container{
       text-align: right;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      a{
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        font-size: 0.9rem;
+        font-weight: 700;
+        transition: all .3s ease;
+        &:hover{
+          opacity: 0.6;
+          transform: rotate(225deg);
+        }
+      }
     }
   }
   .top-0 {
