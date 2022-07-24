@@ -3,8 +3,8 @@
 
     <HeaderComponent/>
     <HomeComponent/>
-    <!-- <ProjectsComponent/> -->
     <AboutComponent/>
+    <!-- <ProjectsComponent/> -->
 
   </div>
 </template>
@@ -12,16 +12,16 @@
 <script>
 import HeaderComponent from './components/HeaderComponent.vue'
 import HomeComponent from './components/HomeComponent.vue'
-// import ProjectsComponent from './components/ProjectsComponent.vue'
 import AboutComponent from './components/AboutComponent.vue'
+// import ProjectsComponent from './components/ProjectsComponent.vue'
 
 export default {
   name: 'App',
   components: {
     HeaderComponent,
     HomeComponent,
-    // ProjectsComponent,
     AboutComponent
+    // ProjectsComponent,
   }
 }
 </script>

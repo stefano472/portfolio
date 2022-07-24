@@ -13,8 +13,10 @@
       </nav>
     </div>
     <div class="menu-extended" :class="toggleMenu ? 'top-0' : ''" >
-      <a href="">About me</a>
-      <a href="">Projects</a>
+      <div class="container">
+        <a href="">About me</a>
+        <a href="">Projects</a>
+      </div>
     </div>
     <div class="mail-me">
       <div class="container">
@@ -70,15 +72,21 @@ header{
     left: 0;
     width: 100vw;
     height: 100vh;
-    padding: 60px;
-    padding-left: 120px;
+    // padding: 60px;
+    // padding-left: 120px;
     background: #EECF8A;
     display: flex;
-    flex-flow: column;
-    align-items: flex-start;
-    justify-content: center;
+    // flex-flow: column;
+    // align-items: flex-start;
+    // justify-content: center;
     z-index: -1;
     transition: all .3s ease;
+    .container{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
     a{
       font-size: 7rem;
       &:first-child{

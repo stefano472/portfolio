@@ -4,9 +4,9 @@
       <h1 class="first-row">Hey what's up?</h1>
       <h1 class="last-row">I'm Stefano.</h1>
       <p class="subtitle">
-        <!-- <span>
-          I'm a Jr Web Developer. 
-        </span> -->
+        <span>
+          Full Stack Web Developer. 
+        </span>
         <span>
           Welcome to my Portfolio!
         </span>
@@ -40,7 +40,8 @@ export default {
   position: relative;
 
   h1 {
-    font-size: 5.5rem;
+    // font-size: 5.5rem;
+    font-size: clamp(3rem, 3vw + 3.5rem, 5.5rem);
     font-family: "PT Mono", monospace;
     position: relative;
     width: max-content;
@@ -101,7 +102,7 @@ export default {
   .subtitle {
     margin-top: 2rem;
     color: rgba(#000 , 0.7);
-    font-size: clamp(0.8rem, 3vw + 0.8rem, 2.5rem);
+    font-size: clamp(1rem, 3vw + 1rem, 3rem);
     text-align: left;
     display: flex;
     flex-direction: column;
