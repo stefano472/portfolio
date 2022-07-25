@@ -4,7 +4,7 @@
     <HeaderComponent/>
     <HomeComponent/>
     <AboutComponent/>
-    <!-- <ProjectsComponent/> -->
+    <ProjectsComponent/>
 
   </div>
 </template>
@@ -13,15 +13,15 @@
 import HeaderComponent from './components/HeaderComponent.vue'
 import HomeComponent from './components/HomeComponent.vue'
 import AboutComponent from './components/AboutComponent.vue'
-// import ProjectsComponent from './components/ProjectsComponent.vue'
+import ProjectsComponent from './components/ProjectsComponent.vue'
 
 export default {
   name: 'App',
   components: {
     HeaderComponent,
     HomeComponent,
-    AboutComponent
-    // ProjectsComponent,
+    AboutComponent,
+    ProjectsComponent,
   }
 }
 </script>
@@ -47,7 +47,8 @@ a{
 .container {
     width: min((100% - 3rem), 1270px);
     margin-inline: auto;
-    padding: 1.25rem 0;
+    // padding: 1.25rem 0;
+    padding: 3rem 0;
 }
 
 .flex-row {
@@ -62,6 +63,17 @@ a{
 
 .w-100{
   width: 100%;
+}
+
+// animation on scroll
+.before-enter{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+}
+.enter{
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 #app {

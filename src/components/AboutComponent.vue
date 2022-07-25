@@ -1,12 +1,13 @@
 <template>
   <section id="about">
     <div class="container flex-row">
-      <div class="left-side">
+      <div v-scrollanimation class="left-side">
 
         <h1>Stefano.</h1>
         <div class="profile">
           <h3>ABOUT ME</h3>
           <p>
+            <i class="quote fa-solid fa-quote-left"></i>
             I'm a full-stack Web Developer, based in Brescia, Italy. 
             Mainly focused on giving to the customer the best FrontEnd experience.
             I've always been a curious person who tries to improve himself.
@@ -30,7 +31,7 @@
             </li>
             <li>
               <img src="../assets/skills/bootstrap.png" alt="bootstrap_logo" class="w-100">
-              <div class="skill-overlay">
+              <div class="skill-overlay boot">
                 Bootstrap
               </div>
             </li>
@@ -90,7 +91,7 @@
 
       </div>
 
-      <div class="right-side">
+      <div v-scrollanimation class="right-side">
         <img src="../assets/photo2.jpg" alt="cover-img">
       </div>
 
@@ -115,10 +116,12 @@ export default {
   position: relative;
   display: flex;
   width: 100%;
-  height: 100vh;
+  // height: 100vh;
+  height: max(100vh, 58rem);
   .flex-row{
     // gap: 1rem;
     position: relative;
+    // padding: 1.75rem;
   }
   .left-side{
     margin-left: 3rem;
@@ -130,20 +133,34 @@ export default {
     }
     h3{
       font-size: clamp(1rem, 3vw + 1rem, 1.8rem);
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
     }
     .profile{
+      // display: flex;
+      // gap: 1rem;
       p{
+        margin-left: 3rem;
         margin-bottom: 1.5rem;
         line-height: 1.5;
+        position: relative;
+        .quote{
+          font-size: 2rem;
+          color: #eecf8a;
+          position: absolute;
+          top: -0.6rem;
+          left: -2rem;
+        }
       }
     }
     .skill{
+      // display: flex;
+      // gap: 1rem;
       ul{
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
         margin-bottom: 1.5rem;
+        margin-left: 3rem;
         li{
           height: 55px;
           width: 55px;
@@ -171,6 +188,9 @@ export default {
             font-size: 0.9rem;
             transition: all 0.4s;
           }
+          .boot{
+            margin-left: -4px;
+          }
           img{
             // filter: grayscale(50%);
             height: 40px;
@@ -180,17 +200,22 @@ export default {
       }
     }
     .link{
-      margin-bottom: 3rem;
-      li{
-        line-height: 2;
-        a{
-          // text-decoration: underline;
-          padding-bottom: 0.1rem;
-          // box-shadow: 0 1px #2c3e50;
-          transition: all 0.3s;
-          &:hover {
-            color: #e8b23e;
-            box-shadow: 0 1px #e8b23e;
+      // display: flex;
+      // gap: 1rem;
+      margin-bottom: 4rem;
+      ul{
+        margin-left: 3rem;
+        li{
+          line-height: 2;
+          a{
+            // text-decoration: underline;
+            padding-bottom: 0.1rem;
+            // box-shadow: 0 1px #2c3e50;
+            transition: all 0.3s;
+            &:hover {
+              color: #e8b23e;
+              box-shadow: 0 1px #e8b23e;
+            }
           }
         }
       }
@@ -218,6 +243,7 @@ export default {
     left: 3rem;
     padding: 13px 85px 13px 30px;
     text-transform: uppercase;
+    background: white;
     border: 2px solid #2c3e50;
     border-radius: 2px;
     i{

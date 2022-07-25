@@ -38,7 +38,9 @@ export default {
   display: flex;
   align-items: center;
   position: relative;
-
+  .container{
+    padding-left: 3rem;
+  }
   h1 {
     // font-size: 5.5rem;
     font-size: clamp(3rem, 3vw + 3.5rem, 5.5rem);
