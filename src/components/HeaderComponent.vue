@@ -2,7 +2,7 @@
   <header>
     <div class="container flex-row">
       <div class="logo flex-row">
-        <a href="#" class="flex-row" @click="toggleMenu = false">
+        <a href="" class="flex-row" @click="toggleMenu = false">
           <img src="../assets/my-logo.svg" alt="logo" class="w-100">
         </a>
       </div>
@@ -10,16 +10,34 @@
         <div class="menu">
           <i @click="toggleMenu = !toggleMenu" :class="toggleMenu ? 'rotate-45' : ''" class="fa-solid fa-bars"></i>
         </div>
+        <div class="links">
+          <ul>
+            <li>
+              <a href="https://github.com/stefano472" target="_blank">GITHUB</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/stefano-piotti-950322237/" target="_blank">LINKEDIN</a>
+            </li>
+            <li>
+              <a href="mailto:stefanopiotti472@gmail.com" >EMAIL</a>
+            </li>   
+            <!-- <li>
+              <a href="mailto:stefanopiotti472@gmail.com" >
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </li>    -->
+          </ul>
+        </div>
       </nav>
     </div>
     <div class="menu-extended" :class="toggleMenu ? 'top-0' : ''" >
       <div class="container">
-        <a href="">&lt; About me /&gt;</a>
+        <a href="#about" @click="toggleMenu = false">&lt; About me /&gt;</a>
         <a href="">&lt; Projects /&gt;</a>
       </div>
     </div>
-    <div class="mail-me">
-      <ul class="container">
+    <!-- <div class="links">
+      <ul>
         <li>
           <a href="https://github.com/stefano472" target="_blank">GITHUB</a>
         </li>
@@ -28,14 +46,14 @@
         </li>
         <li>
           <a href="mailto:stefanopiotti472@gmail.com" >EMAIL</a>
-        </li>   
+        </li>    -->
         <!-- <li>
           <a href="mailto:stefanopiotti472@gmail.com" >
             <i class="fa-solid fa-envelope"></i>
           </a>
         </li>    -->
-      </ul>
-    </div>
+      <!-- </ul>
+    </div> -->
   </header>
 </template>
 
@@ -114,16 +132,13 @@ header{
       }
     }
   }
-  .mail-me{
-    width: 100%;
+  .links{
+    // width: 100%;
     position: fixed;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    .container{
-      text-align: right;
+    bottom: 3rem;
+    // left: 0;
+    margin-left: 9px;
+    ul{
       display: flex;
       flex-direction: column;
       gap: 2rem;

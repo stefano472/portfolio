@@ -7,10 +7,10 @@
         <div class="profile">
           <h3>ABOUT ME</h3>
           <p>
-            ` I'm a full-stack Web Developer, based in Brescia, Italy. 
+            I'm a full-stack Web Developer, based in Brescia, Italy. 
             Mainly focused on giving to the customer the best FrontEnd experience.
             I've always been a curious person who tries to improve himself.
-            I would call myself a dreamer 💭💭 a passionate globetrotter 🌍 who loves good Food, Sports, Computer Science, Finance and Blockchain. `
+            I would call myself a dreamer 💭💭 a passionate globetrotter 🌍 who loves good Food, Sports, Computer Science, Finance and Blockchain.
           </p>
         </div>
         <div class="skill">
@@ -18,52 +18,88 @@
           <ul>
             <li>
               <img src="../assets/skills/html.png" alt="html_logo" class="w-100">
+              <div class="skill-overlay">
+                Html
+              </div>
             </li>
             <li>
               <img src="../assets/skills/css.png" alt="css_logo" class="w-100">
+              <div class="skill-overlay">
+                Css
+              </div>
             </li>
             <li>
               <img src="../assets/skills/bootstrap.png" alt="bootstrap_logo" class="w-100">
+              <div class="skill-overlay">
+                Bootstrap
+              </div>
             </li>
             <li>
               <img src="../assets/skills/sass.png" alt="sass_logo" class="w-100">
+              <div class="skill-overlay">
+                Sass
+              </div>
             </li>
             <li>
               <img src="../assets/skills/javascript.png" alt="javascript_logo" class="w-100">
+              <div class="skill-overlay">
+                Js
+              </div>
             </li>
             <li>
               <img src="../assets/skills/vuejs.png" alt="vuejs_logo" class="w-100">
+              <div class="skill-overlay">
+                VueJs
+              </div>
             </li>
             <li>
               <img src="../assets/skills/php.png" alt="php_logo" class="w-100">
+              <div class="skill-overlay">
+                Php
+              </div>
             </li>
             <li>
               <img src="../assets/skills/laravel.png" alt="laravel_logo" class="w-100">
+              <div class="skill-overlay">
+                Laravel
+              </div>
             </li>
             <li>
               <img src="../assets/skills/mysql.png" alt="mysql_logo" class="w-100">
+              <div class="skill-overlay">
+                MySQL
+              </div>
             </li>
             <li>
               <img src="../assets/skills/github.png" alt="github_logo" class="w-100">
+              <div class="skill-overlay">
+                GitHub
+              </div>
             </li>
           </ul>
         </div>
         <div class="link">
           <h3>CONTACTS</h3>
           <ul>
-            <li>mail ~ stefanopiotti472@gmail.com</li>
-            <li>phone ~ +39 334 3650054</li>
-            <li>linkedin ~ linkedin.com/in/stefano-piotti-950322237</li>
-            <li>github ~ github.com/stefano472</li>
+            <li><i class="fa-solid fa-link"></i> MAIL ~ <a href="mailto:stefanopiotti472@gmail.com">stefanopiotti472@gmail.com</a></li>
+            <li><i class="fa-solid fa-link"></i> PHONE ~ <a href="tel:3343650054">+39 334 3650054</a></li>
+            <li><i class="fa-solid fa-link"></i> LINKEDIN ~ <a href="https://www.linkedin.com/in/stefano-piotti-950322237/" target="_blank">linkedin.com/in/stefano-piotti-950322237</a></li>
+            <li><i class="fa-solid fa-link"></i> GITHUB ~ <a href="https://github.com/stefano472" target="_blank">github.com/stefano472</a></li>
           </ul>
         </div>
 
       </div>
 
       <div class="right-side">
-        <img src="../assets/stef.jpg" alt="jumbo" class="w-100">
+        <img src="../assets/photo2.jpg" alt="cover-img">
       </div>
+
+      <a href="https://www.canva.com/design/DAFD3BYBWgg/8S0Sg5-hE-rVO1Enx-FSeg/view?" class="resume" target="_blank">
+        Watch my resume 
+        <i class="fa-solid fa-rocket"></i>
+      </a>
     </div>
+    <img src="../assets/divider.svg" alt="page-down" class="arrow-down">
   </section>
 </template>
 
@@ -76,24 +112,143 @@ export default {
 <style  scoped lang="scss">
 
 #about{
+  position: relative;
+  display: flex;
   width: 100%;
   height: 100vh;
+  .flex-row{
+    // gap: 1rem;
+    position: relative;
+  }
   .left-side{
-    width: 40%;
+    margin-left: 3rem;
+    width: 50%;
+    h1{
+      font-size: clamp(3rem, 3vw + 3.5rem, 5.5rem);
+      font-family: "PT Mono", monospace;
+      margin-bottom: 1rem;
+    }
+    h3{
+      font-size: clamp(1rem, 3vw + 1rem, 1.8rem);
+      margin-bottom: 0.75rem;
+    }
+    .profile{
+      p{
+        margin-bottom: 1.5rem;
+        line-height: 1.5;
+      }
+    }
     .skill{
       ul{
         display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+        li{
+          height: 55px;
+          width: 55px;
+          display: grid;
+          place-items: center;
+          position: relative;
+          &:hover{
+            .skill-overlay{
+              opacity: 0.9;
+            }
+            img{
+              filter: grayscale(100%);
+            }
+          }
+          .skill-overlay{
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: grid;
+            place-items: center;
+            font-size: 0.9rem;
+            transition: all 0.4s;
+          }
+          img{
+            // filter: grayscale(50%);
+            height: 40px;
+            width: 40px;
+          }
+        }
+      }
+    }
+    .link{
+      margin-bottom: 3rem;
+      li{
+        line-height: 2;
+        a{
+          // text-decoration: underline;
+          padding-bottom: 0.1rem;
+          // box-shadow: 0 1px #2c3e50;
+          transition: all 0.3s;
+          &:hover {
+            color: #e8b23e;
+            box-shadow: 0 1px #e8b23e;
+          }
+        }
       }
     }
   }
   .right-side{
-    width: 60%;
+    width: 50%;
+    margin: 0 3rem 0 0.5rem;
     display: flex;
-    margin: 1rem;
+    justify-content: center;
     img{
-      object-fit: contain;
+      // filter: grayscale(50%) sepia(50%);
+      // filter: saturate(50%);
+      filter: sepia(50%);
       border-radius: 5px;
+      height: 600px;
+      // margin-right: 2rem;
     }
+  }
+  .resume{
+    // z-index: 5;
+    cursor: pointer;
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    padding: 13px 85px 13px 30px;
+    text-transform: uppercase;
+    border: 2px solid #2c3e50;
+    border-radius: 2px;
+    i{
+      // border-radius: 5px;
+      font-size: 1.2rem;
+      height: 100%;
+      background: white;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 50px;
+      border-left: 2px solid #2c3e50;
+      // box-shadow: -2px 0 #2c3e50;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // transition: all .3s ease;
+      transition: all 0.3s;
+    }
+    &:hover{
+      i{
+        background: #eecf8a;
+      }
+    }
+  }
+  .arrow-down{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 3rem;
   }
 }
 </style>
