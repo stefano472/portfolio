@@ -32,7 +32,7 @@ export default {
   --typewriterSpeedBottom: 3s;
   --typewriterCharactersBottom: 12;
 
-  height: 100vh;
+  height: max(100vh, 530px);
   width: 100%;
   background: var(--bg-home);
   display: flex;

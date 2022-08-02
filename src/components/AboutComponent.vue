@@ -1,5 +1,7 @@
 <template>
   <section id="about">
+    <img src="../assets/divider.svg" alt="new-page" class="arrow-up">
+
     <div class="container flex-row">
       <div v-scrollanimation class="left-side">
 
@@ -100,7 +102,6 @@
         <i class="fa-solid fa-rocket"></i>
       </a>
     </div>
-    <img src="../assets/divider.svg" alt="page-down" class="arrow-down">
   </section>
 </template>
 
@@ -118,6 +119,13 @@ export default {
   width: 100%;
   // height: 100vh;
   height: max(100vh, 58rem);
+  .arrow-up{
+    position: absolute;
+    top: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    // margin-bottom: 3rem;
+  }
   .flex-row{
     // gap: 1rem;
     position: relative;
@@ -268,13 +276,6 @@ export default {
         background: #eecf8a;
       }
     }
-  }
-  .arrow-down{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-bottom: 3rem;
   }
 }
 </style>

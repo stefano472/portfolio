@@ -28,9 +28,21 @@ export default {
 
 <style lang="scss">
 *{
-    box-sizing: border-box;
+  box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+::-webkit-scrollbar {
+  width: 1rem;
+}
+::-webkit-scrollbar-track {
+  margin-block: 0.5rem;
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  border: 3px solid transparent;
+  box-shadow: inset 0 0 10px 10px #e6e6e6;
 }
 
 // // // some global utilities

@@ -33,7 +33,7 @@
     <div class="menu-extended" :class="toggleMenu ? 'top-0' : ''" >
       <div class="container">
         <a href="#about" @click="toggleMenu = false">&lt; About me /&gt;</a>
-        <a href="">&lt; Projects /&gt;</a>
+        <a href="#project" @click="toggleMenu = false">&lt; Projects /&gt;</a>
       </div>
     </div>
     <!-- <div class="links">
