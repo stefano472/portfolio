@@ -80,12 +80,12 @@ a{
 // animation on scroll
 .before-enter{
   opacity: 0;
-  transform: translateY(50px);
-  transition: all 1s ease-out;
+  // transform: translateY(50px);
+  transition: all 1s ease-in;
 }
 .enter{
   opacity: 1;
-  transform: translateY(0px);
+  // transform: translateY(0px);
 }
 
 #app {

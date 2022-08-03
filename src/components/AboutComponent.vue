@@ -86,7 +86,7 @@
           <ul>
             <li><i class="fa-solid fa-link"></i> MAIL ~ <a href="mailto:stefanopiotti472@gmail.com">stefanopiotti472@gmail.com</a></li>
             <li><i class="fa-solid fa-link"></i> PHONE ~ <a href="tel:3343650054">+39 334 3650054</a></li>
-            <li><i class="fa-solid fa-link"></i> LINKEDIN ~ <a href="https://www.linkedin.com/in/stefano-piotti-950322237/" target="_blank">linkedin.com/in/stefano-piotti-950322237</a></li>
+            <li><i class="fa-solid fa-link"></i> LINKEDIN ~ <a href="https://www.linkedin.com/in/stefano-piotti-950322237/" target="_blank">linkedin.com/in/stefano-piotti</a></li>
             <li><i class="fa-solid fa-link"></i> GITHUB ~ <a href="https://github.com/stefano472" target="_blank">github.com/stefano472</a></li>
           </ul>
         </div>
@@ -166,7 +166,7 @@ export default {
       ul{
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
+        column-gap: 0.5rem;
         margin-bottom: 1.5rem;
         margin-left: 3rem;
         li{
@@ -256,7 +256,7 @@ export default {
     border-radius: 2px;
     i{
       // border-radius: 5px;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       height: 100%;
       background: white;
       position: absolute;
@@ -274,6 +274,36 @@ export default {
     &:hover{
       i{
         background: #eecf8a;
+      }
+    }
+  }
+}
+
+@media screen and(max-width:1280px) {
+  h1 {
+    margin: 3.5rem 0 1rem;
+  }
+}
+
+@media screen and(max-width:992px) {
+  #about {
+    height: fit-content;
+    .flex-row{
+      flex-direction: column;
+      .left-side{
+        width: auto;
+        margin: 0 4rem;
+        h1{
+          margin: 1rem 0;
+        }
+        .link{
+          margin-bottom: 5rem;
+        }
+      }
+      .right-side {
+        width: auto;
+        margin: 3.5rem 0 0;
+        order: -1;
       }
     }
   }

@@ -20,12 +20,8 @@
             </li>
             <li>
               <a href="mailto:stefanopiotti472@gmail.com" >EMAIL</a>
-            </li>   
-            <!-- <li>
-              <a href="mailto:stefanopiotti472@gmail.com" >
-                <i class="fa-solid fa-envelope"></i>
-              </a>
-            </li>    -->
+            </li>
+
           </ul>
         </div>
       </nav>
@@ -135,13 +131,21 @@ header{
   .links{
     // width: 100%;
     position: fixed;
-    bottom: 3rem;
+    bottom: 0;
     // left: 0;
     margin-left: 9px;
     ul{
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 1.25rem;
+      &::after{
+        content: "";
+        display: block;
+        width: 2px;
+        height: 90px;
+        margin: 0px auto;
+        background-color: #2c3e50;
+      }
       a{
         writing-mode: vertical-rl;
         transform: rotate(180deg);
