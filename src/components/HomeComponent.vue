@@ -141,5 +141,59 @@ export default {
   }
 }
 
+@media screen and (max-width:912px) {
+  #home{
+    h1{
+      font-size: 4rem;
+    }
+    .subtitle{
+      font-size: 2.1rem;
+    }
+  }
+}
+
+@media screen and (max-width:700px) {
+  #home{
+    h1{
+      font-size: 3rem;
+    }
+    .subtitle{
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@media screen and (max-width:540px) {
+  #home{
+    h1{
+      font-size: 2.5rem;
+    }
+    .subtitle{
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media screen and (max-width:472px) {
+  #home{
+    h1{
+      font-size: 2rem;
+    }
+    .subtitle{
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media screen and (max-width:400px) {
+  #home{
+    h1{
+      font-size: 1.7rem;
+    }
+    .subtitle{
+      font-size: 1rem;
+    }
+  }
+}
 
 </style>

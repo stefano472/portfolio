@@ -1,24 +1,11 @@
-# portfolio-project
+# Hey, I'm Stefano.
 
-## Project setup
-```
-npm install
-```
+## Full Stack Web Developer
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Welcome to my Portfolio
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+I made it basically with Vue.js and sass!! <br>
+Have a look at the project over here: https://stefano472.github.io/portfolio/ <br>
+Reach me out over here stefanopiotti472@gmail.com 📫 if you want to tell me something <br>
+<br>
+Bye 👋👋

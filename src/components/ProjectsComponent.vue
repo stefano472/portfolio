@@ -53,9 +53,9 @@
               <a href="https://github.com/stefano472/boolivery_project" target="_blank">
                 <i class="fa-brands fa-github"></i>
               </a>
-              <a href="https://github.com/stefano472/boolivery_project" target="_blank">
+              <!-- <a href="https://github.com/stefano472/boolivery_project" target="_blank">
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
+              </a> -->
             </div>
           </div>
         </li>
@@ -176,27 +176,18 @@ export default {
       // background: #cfffe5;
       .card-img{
         grid-area: 1/8/2/2;
-        @media screen and (max-width: 1280px) {
-          grid-area: 1/8/2/1;
-        }
         // grid-area: 1/8/2/1;
         img{
-          // background: rgba($color: #eecf8a, $alpha: 1.0);
           filter: sepia(30%);
+          width: 100%;
+          border-radius: 3px;
           &:hover{
             filter: none;
           }
-          // width: 20rem;
-          width: 100%;
-          border-radius: 3px;
-          // transform: rotate(350deg);
         }
       }
       .card-img.second{
         grid-area: 1 / 6 / 2 / 12;
-        @media screen and (max-width: 1280px) {
-          grid-area: 1 / 6 / 2 / 13;
-        }
       }
       .card-description{
         text-align: right;
@@ -229,6 +220,7 @@ export default {
           gap: 0.75rem;
           justify-content: end;
           margin-bottom: 1rem;
+          flex-wrap: wrap;
           li{
             font-family: "PT Mono", monospace;
           }
@@ -265,7 +257,7 @@ export default {
     position: relative;
     // bottom: 3rem;
     // left: 3rem;
-    margin-top: 3rem;
+    margin-top: 1rem;
     padding: 13px 85px 13px 30px;
     text-transform: uppercase;
     background: white;
@@ -303,7 +295,102 @@ export default {
   }
 }
 
-// @media screen and (max-width:1280px) {
-  
-// }
+@media screen and (max-width:1280px) {
+  #project{
+    .proj{
+      .card{
+        .card-img{
+          grid-area: 1/8/2/1;
+        }
+        .card-img.second{
+          grid-area: 1 / 6 / 2 / 13;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #project{
+    .container{
+      padding: 3rem 3.5rem;
+    }
+    .proj{
+      width: 100%;
+      padding: 3rem 0;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #project{
+    .proj{
+      .card{
+        .card-img{
+          height: 100%;
+          grid-area: 1/13/2/1;
+          display: flex;
+          opacity: 0.25;
+          box-shadow: 0 10px 20px 5px #2c3e50;
+          border-radius: 3px;
+          img{
+            filter: sepia(70%) blur(3px) brightness(0.9);
+            // filter: sepia(30%) blur(3px);
+            object-fit: cover;
+            object-position: left;
+          }
+        }
+        .card-img.second{
+          grid-area: 1/1/2/13;
+        }
+        .card-description{
+          text-align: start;
+          grid-area: 1/1/2/13;
+          padding: 2rem;
+          h5{
+            text-shadow: 1px 1px 8px #2c3e50;
+          }
+          ul{
+            font-size: 0.9rem;
+          }
+          p{
+            font-size: 0.9rem;
+          }
+        }
+        .card-description.second{
+          grid-area: 1/13/2/1;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:620px) {
+  #project{
+    .flex-column{
+      width: min(100% - 2rem, 1270px);
+      h1{
+        font-size: 4rem;
+      }
+      .more-proj{
+        font-size: 0.8rem;
+        padding: 13px 80px 13px 25px;
+        i{
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:480px) {
+  #project{
+    .flex-column{
+      width: min(100% - 1rem, 1270px);
+      h1{
+        font-size: 3rem;
+      }
+    }
+  }
+}
 </style>

@@ -290,6 +290,7 @@ export default {
     height: fit-content;
     .flex-row{
       flex-direction: column;
+      align-items: flex-start;
       .left-side{
         width: auto;
         margin: 0 4rem;
@@ -301,9 +302,87 @@ export default {
         }
       }
       .right-side {
+        padding: 0 4rem;
         width: auto;
         margin: 3.5rem 0 0;
         order: -1;
+      }
+      .resume{
+        left: 4rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:620px) {
+  #about{
+    .flex-row{
+      width: min(100% - 2rem, 1270px);
+      .left-side{
+        h1{
+          font-size: 4rem;
+        }
+        h3{
+          font-size: 1.5rem;
+        }
+        p{
+          font-size: 0.9rem;
+          margin-left: 0;
+          .quote{
+            opacity: 0;
+          }
+        }
+        ul{
+          margin-left: 0;
+          li{
+            font-size: 0.9rem;
+          }
+        }
+      }
+      .right-side{
+        img{
+          height: 400px;
+        }
+      }
+      .resume{
+        font-size: 0.8rem;
+        padding: 13px 80px 13px 25px;
+        i{
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width:480px) {
+  #about{
+    .flex-row{
+      width: min(100% - 1rem, 1270px);
+      .left-side{
+        h1{
+          font-size: 3rem;
+        }
+        h3{
+          font-size: 1.2rem;
+        }
+        p{
+          font-size: 0.8rem;
+          margin-left: 0;
+          .quote{
+            opacity: 0;
+          }
+        }
+        ul{
+          margin-left: 0;
+          li{
+            font-size: 0.8rem;
+          }
+        }
+      }
+      .right-side{
+        img{
+          height: 300px;
+        }
       }
     }
   }

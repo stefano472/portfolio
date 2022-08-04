@@ -10,8 +10,9 @@
         <div class="menu">
           <i @click="toggleMenu = !toggleMenu" :class="toggleMenu ? 'rotate-45' : ''" class="fa-solid fa-bars"></i>
         </div>
-        <div class="links">
+        <div v-if="windowWidth > 620" class="links">
           <ul>
+
             <li>
               <a href="https://github.com/stefano472" target="_blank">GITHUB</a>
             </li>
@@ -21,7 +22,22 @@
             <li>
               <a href="mailto:stefanopiotti472@gmail.com" >EMAIL</a>
             </li>
+            
+          </ul>
+        </div>
+        <div v-else :class="toggleMenu? 'opacity-1' : '' " class="links opacity-0">
+          <ul>
 
+            <li>
+              <a href="https://github.com/stefano472" target="_blank">GITHUB</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/stefano-piotti-950322237/" target="_blank">LINKEDIN</a>
+            </li>
+            <li>
+              <a href="mailto:stefanopiotti472@gmail.com" >EMAIL</a>
+            </li>
+            
           </ul>
         </div>
       </nav>
@@ -32,28 +48,12 @@
         <a href="#project" @click="toggleMenu = false">&lt; Projects /&gt;</a>
       </div>
     </div>
-    <!-- <div class="links">
-      <ul>
-        <li>
-          <a href="https://github.com/stefano472" target="_blank">GITHUB</a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/stefano-piotti-950322237/" target="_blank">LINKEDIN</a>
-        </li>
-        <li>
-          <a href="mailto:stefanopiotti472@gmail.com" >EMAIL</a>
-        </li>    -->
-        <!-- <li>
-          <a href="mailto:stefanopiotti472@gmail.com" >
-            <i class="fa-solid fa-envelope"></i>
-          </a>
-        </li>    -->
-      <!-- </ul>
-    </div> -->
+
   </header>
 </template>
 
 <script>
+
 export default {
     name: 'HeaderComponent',
     data() {
@@ -112,6 +112,7 @@ header{
     z-index: -1;
     transition: all .3s ease;
     .container{
+      padding-left: 3rem;
       width: min((100% - 3rem), 1270px);
       display: flex;
       flex-direction: column;
@@ -119,7 +120,8 @@ header{
       justify-content: center;
     }
     a{
-      font-size: 7rem;
+      // font-size: 7rem;
+      font-size: clamp(3rem, 3vw + 3.5rem, 5.5rem);
       &:first-child{
         margin-bottom: 2rem;
       }
@@ -129,6 +131,7 @@ header{
     }
   }
   .links{
+    transition: all 0.4s ease;
     // width: 100%;
     position: fixed;
     bottom: 0;
@@ -165,6 +168,33 @@ header{
   .rotate-45{
     transform: rotate(45deg);
   }
+  .opacity-0{
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  .opacity-1{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
+@media screen and (max-width:700px ) {
+  header{
+    .menu-extended{
+      a{
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:472px ) {
+  header{
+    .menu-extended{
+      a{
+        font-size: 2rem;
+      }
+    }
+  }
+}
 </style>
