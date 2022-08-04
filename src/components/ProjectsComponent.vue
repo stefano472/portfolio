@@ -124,7 +124,10 @@
         <i class="fa-brands fa-github"></i>
       </a>
       <div class="credit">
-        <p>Design and Made with ❤️ by Stefano Piotti</p>
+        <a href="https://github.com/stefano472/portfolio" target="_blank">
+          <span>Design and Made with ❤️ by Stefano Piotti</span>
+          <i class="fa-brands fa-github"></i>
+        </a>
       </div>
     </div>
     
@@ -287,11 +290,23 @@ export default {
     }
   }
   .credit{
-    text-align: center;
     font-family: "PT Mono", monospace;
     margin-top: 3rem;
     font-size: 0.7rem;
     font-weight: bold;
+    a{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: 0.3s;
+      i{
+        font-size: 1.5rem;
+      }
+      &:hover{
+        color: #eecf8a;
+      }
+    }
   }
 }
 
@@ -390,6 +405,9 @@ export default {
       h1{
         font-size: 3rem;
       }
+      // .credit{
+      //   font-size: 0.6rem;
+      // }
     }
   }
 }
