@@ -8,7 +8,7 @@
       <ul class="proj flex-column container">
         <li v-scrollanimation class="card">
           <div class="card-img">
-            <img src="../assets/boolivery.png" alt="boolivery-home">
+            <img src="../assets/boolivery2.jpg" alt="boolivery-home">
           </div>
           <div class="card-description">
             <h5>Featured Project</h5>
