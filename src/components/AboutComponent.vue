@@ -97,7 +97,7 @@
         <img src="../assets/photo2.jpg" alt="cover-img">
       </div>
 
-      <a href="https://www.canva.com/design/DAFD3BYBWgg/8S0Sg5-hE-rVO1Enx-FSeg/view?" class="resume" target="_blank">
+      <a href="https://www.canva.com/design/DAFG-dtseVk/ODhIDeCB_rpIbP9akt8epw/view?utm_content=DAFG-dtseVk&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" class="resume" target="_blank">
         Watch my resume 
         <i class="fa-solid fa-rocket"></i>
       </a>
