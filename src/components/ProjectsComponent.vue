@@ -4,28 +4,6 @@
 
     <div class="container flex-column">
       <h1 v-scrollanimation>Projects.</h1>
-      <!-- <div class="proj flex-row">
-
-        <div class="card">
-          <div class="card-img flex-column">
-            <img src="../assets/boolivery.png" alt="boolivery-home"> -->
-            <!-- <div class="discover">
-              Discover
-              <i class="fa-solid fa-rocket"></i>
-            </div> -->
-          <!-- </div>
-          <div class="card-description">
-            <h3>Boolivery</h3>
-            <h5>eCommerce</h5>
-            <p>
-              Food Delivery Website.
-              Built front-end side with vue.js and sass, while on the backend side with PHP (laravel framework). Emails management with mailtrap.io and fictional payments with braintree sandbox.
-              A registered user can modify their data with the communication with a relational database (mySQL)
-            </p>
-          </div>
-        </div>
-
-      </div> -->
 
       <ul class="proj flex-column container">
         <li v-scrollanimation class="card">
@@ -171,12 +149,6 @@ export default {
       gap: 10px;
       grid-template-columns: repeat(12, 1fr);
       align-items: center;
-      // width: calc(50% - 0.5rem);
-      // position: relative;
-      // display: flex;
-      // align-items: center;
-      // padding: 1rem;
-      // background: #cfffe5;
       .card-img{
         grid-area: 1/8/2/2;
         // grid-area: 1/8/2/1;
@@ -410,9 +382,6 @@ export default {
       h1{
         font-size: 3rem;
       }
-      // .credit{
-      //   font-size: 0.6rem;
-      // }
     }
   }
 }

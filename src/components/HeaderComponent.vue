@@ -29,13 +29,13 @@
           <ul>
 
             <li>
-              <a href="https://github.com/stefano472" target="_blank">GITHUB</a>
+              <a class="pointer-event" href="https://github.com/stefano472" target="_blank">GITHUB</a>
             </li>
             <li>
               <a href="https://www.linkedin.com/in/stefano-piotti-950322237/" target="_blank">LINKEDIN</a>
             </li>
             <li>
-              <a href="mailto:stefanopiotti472@gmail.com" >EMAIL</a>
+              <a href="mailto:stefanopiotti472@gmail.com" target="_blank">EMAIL</a>
             </li>
             
           </ul>
@@ -91,15 +91,10 @@ header{
     font-size: 1.75rem;
     cursor: pointer;
     transition: all 0.2s;
-    html.no-touch &:hover{
+    &:hover{
       opacity: 0.6;
       transform: rotate(45deg);
     }
-    // &:focus,
-    // &:active{
-    //   opacity: 1;
-    //   transform: rotate(0);
-    // }
   }
   .menu-extended{
     position: absolute;
@@ -111,9 +106,6 @@ header{
     // padding-left: 120px;
     background: #EECF8A;
     display: flex;
-    // flex-flow: column;
-    // align-items: flex-start;
-    // justify-content: center;
     z-index: -1;
     transition: all .3s ease;
     .container{
@@ -160,7 +152,7 @@ header{
         font-size: 0.9rem;
         font-weight: 700;
         transition: all .3s ease;
-        html.no-touch &:hover{
+        &:hover{
           opacity: 0.6;
           transform: rotate(225deg);
         }
@@ -176,19 +168,31 @@ header{
   .opacity-0{
     opacity: 0;
     transform: translateY(-100px);
+    pointer-events: none;
   }
   .opacity-1{
     opacity: 1;
     transform: translateY(0);
+    pointer-events: auto;
   }
 }
 
 @media screen and (max-width:700px ) {
   header{
     .container{
+      i:hover{
+        opacity: 1;
+        transform: rotate(0deg);
+      }
       .links{
-        ul::after{
-          height: 40px;
+        ul{
+          a:hover{
+            opacity: 1;
+            transform: rotate(180deg);
+          }
+          &::after{
+            height: 40px;
+          }
         }
       }
     }
