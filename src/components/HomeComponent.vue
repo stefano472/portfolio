@@ -152,46 +152,66 @@ export default {
   }
 }
 
-@media screen and (max-width:700px) {
+@media screen and (max-width:720px) {
   #home{
     h1{
-      font-size: 3rem;
+      font-size: 3.5rem;
     }
     .subtitle{
-      font-size: 1.5rem;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@media screen and (max-width:620px) {
+  #home{
+    .container{
+      padding-left: 0;
+      h1{
+        font-size: 3.4rem;
+      }
+      .subtitle{
+        font-size: 1.8rem;
+      }
     }
   }
 }
 
 @media screen and (max-width:540px) {
   #home{
-    h1{
-      font-size: 2.5rem;
-    }
-    .subtitle{
-      font-size: 1.3rem;
+    .container{
+      h1{
+        font-size: 2.8rem;
+      }
+      .subtitle{
+        font-size: 1.5rem;
+      }
     }
   }
 }
 
 @media screen and (max-width:472px) {
   #home{
-    h1{
-      font-size: 2rem;
-    }
-    .subtitle{
-      font-size: 1.2rem;
+    .container{
+      h1{
+        font-size: 2.5rem;
+      }
+      .subtitle{
+        font-size: 1.3rem;
+      }
     }
   }
 }
 
 @media screen and (max-width:400px) {
   #home{
-    h1{
-      font-size: 1.7rem;
-    }
-    .subtitle{
-      font-size: 1rem;
+    .container{
+      h1{
+        font-size: 2.1rem;
+      }
+      .subtitle{
+        font-size: 1.1rem;
+      }
     }
   }
 }

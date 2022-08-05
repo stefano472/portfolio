@@ -317,8 +317,8 @@ export default {
 @media screen and (max-width:620px) {
   #about{
     .flex-row{
-      width: min(100% - 2rem, 1270px);
       .left-side{
+        margin: 0;
         h1{
           font-size: 4rem;
         }
@@ -340,11 +340,13 @@ export default {
         }
       }
       .right-side{
+        padding: 0;
         img{
           height: 400px;
         }
       }
       .resume{
+        left: 0;
         font-size: 0.8rem;
         padding: 13px 80px 13px 25px;
         i{
@@ -357,7 +359,6 @@ export default {
 @media screen and (max-width:480px) {
   #about{
     .flex-row{
-      width: min(100% - 1rem, 1270px);
       .left-side{
         h1{
           font-size: 3rem;

@@ -340,13 +340,15 @@ export default {
 @media screen and (max-width: 800px) {
   #project{
     .proj{
+      padding: 1.5rem 0;
       .card{
         .card-img{
           height: 100%;
           grid-area: 1/13/2/1;
           display: flex;
           opacity: 0.25;
-          box-shadow: 0 10px 20px 5px #2c3e50;
+          // box-shadow: 0 10px 20px 5px #2c3e50;
+          box-shadow: 0 1px 10px 0px #2c3e50;
           border-radius: 3px;
           img{
             filter: sepia(70%) blur(3px) brightness(0.9);
@@ -367,9 +369,13 @@ export default {
           }
           ul{
             font-size: 0.9rem;
+            justify-content: flex-start;
           }
           p{
             font-size: 0.9rem;
+          }
+          .link{
+            justify-content: flex-start;
           }
         }
         .card-description.second{
@@ -383,7 +389,7 @@ export default {
 @media screen and (max-width:620px) {
   #project{
     .flex-column{
-      width: min(100% - 2rem, 1270px);
+      padding: 3rem 0;
       h1{
         font-size: 4rem;
       }
@@ -401,7 +407,6 @@ export default {
 @media screen and (max-width:480px) {
   #project{
     .flex-column{
-      width: min(100% - 1rem, 1270px);
       h1{
         font-size: 3rem;
       }

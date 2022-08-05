@@ -91,10 +91,15 @@ header{
     font-size: 1.75rem;
     cursor: pointer;
     transition: all 0.2s;
-    &:hover{
+    html.no-touch &:hover{
       opacity: 0.6;
       transform: rotate(45deg);
     }
+    // &:focus,
+    // &:active{
+    //   opacity: 1;
+    //   transform: rotate(0);
+    // }
   }
   .menu-extended{
     position: absolute;
@@ -155,7 +160,7 @@ header{
         font-size: 0.9rem;
         font-weight: 700;
         transition: all .3s ease;
-        &:hover{
+        html.no-touch &:hover{
           opacity: 0.6;
           transform: rotate(225deg);
         }
@@ -180,9 +185,32 @@ header{
 
 @media screen and (max-width:700px ) {
   header{
+    .container{
+      .links{
+        ul::after{
+          height: 40px;
+        }
+      }
+    }
     .menu-extended{
       a{
-        font-size: 3rem;
+        font-size: 4rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:620px ) {
+  header{
+    background: #cfffe5;
+    box-shadow: 0 1px 6px 0px #9ac1ac;
+    .container{
+      padding: 1rem 0;
+    }
+    .menu-extended{
+      font-size: 3.5rem;
+      .container{
+        padding-left: 0;
       }
     }
   }
@@ -192,7 +220,17 @@ header{
   header{
     .menu-extended{
       a{
-        font-size: 2rem;
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:400px ) {
+  header{
+    .menu-extended{
+      a{
+        font-size: 2.8rem;
       }
     }
   }
