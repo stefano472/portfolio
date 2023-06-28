@@ -2,7 +2,7 @@
   <section id="home" >
     <div class="container">
       <h1 class="first-row">Hey what's up?</h1>
-      <h1 class="last-row">I'm Stefano.</h1>
+      <h1 class="last-row">I'm Stefano!</h1>
       <p class="subtitle">
         <span>
           Full Stack Web Developer. 

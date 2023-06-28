@@ -38,6 +38,12 @@
               </div>
             </li>
             <li>
+              <img src="../assets/skills/tailwind.png" alt="tailwind_logo" class="w-100">
+              <div class="skill-overlay boot">
+                Tailwind
+              </div>
+            </li>
+            <li>
               <img src="../assets/skills/sass.png" alt="sass_logo" class="w-100">
               <div class="skill-overlay">
                 Sass
@@ -47,6 +53,18 @@
               <img src="../assets/skills/javascript.png" alt="javascript_logo" class="w-100">
               <div class="skill-overlay">
                 Js
+              </div>
+            </li>
+            <li>
+              <img src="../assets/skills/typescript.png" alt="typescript_logo" class="w-100">
+              <div class="skill-overlay">
+                Ts
+              </div>
+            </li>
+            <li>
+              <img src="../assets/skills/react.png" alt="react_logo" class="w-100">
+              <div class="skill-overlay">
+                React
               </div>
             </li>
             <li>
@@ -65,6 +83,18 @@
               <img src="../assets/skills/laravel.png" alt="laravel_logo" class="w-100">
               <div class="skill-overlay">
                 Laravel
+              </div>
+            </li>
+            <li>
+              <img src="../assets/skills/flutter.png" alt="flutter_logo" class="w-100">
+              <div class="skill-overlay">
+                Flutter
+              </div>
+            </li>
+            <li>
+              <img src="../assets/skills/firebase.png" alt="firebase_logo" class="w-100">
+              <div class="skill-overlay">
+                Firebase
               </div>
             </li>
             <li>
@@ -97,7 +127,7 @@
         <img src="../assets/photo2.jpg" alt="cover-img">
       </div>
 
-      <a href="https://www.canva.com/design/DAFG-dtseVk/ODhIDeCB_rpIbP9akt8epw/view?utm_content=DAFG-dtseVk&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" class="resume" target="_blank">
+      <a href="https://www.canva.com/design/DAFmorB8-cI/-oonjtn8b-8-oaMUeczKQw/view?utm_content=DAFmorB8-cI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" class="resume" target="_blank">
         Watch my resume 
         <i class="fa-solid fa-rocket"></i>
       </a>

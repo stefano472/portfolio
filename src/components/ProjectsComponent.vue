@@ -8,9 +8,41 @@
       <ul class="proj flex-column container">
         <li v-scrollanimation class="card">
           <div class="card-img">
-            <img src="../assets/boolivery2.jpg" alt="boolivery-home">
+            <img src="../assets/foodie_app.png" alt="foodie-home">
           </div>
           <div class="card-description">
+            <h5>Featured Project</h5>
+            <h3>Foodie App</h3>
+            <h5>Social App</h5>
+            <p>
+              Social "like" App to promote restaurants in your area.
+              This my first project to practice with mobile development.
+              Made with Flutter a crossplatform framework written in Dart.
+              Video storage and database is managed with Firebase and you can authenticate with Google authentication.
+              There's a compiled Apk and you can view the webApp at the button link below.
+            </p>
+            <ul class="flex-row">
+              <li>Dart</li>
+              <li>Flutter</li>
+              <li>Firebase</li>
+              <li>Google Authentication</li>
+            </ul>
+            <div class="link flex-row">
+              <!-- <a href="https://github.com/stefano472/boolivery_project" target="_blank">
+                <i class="fa-brands fa-github"></i>
+              </a> -->
+              <a href="https://stunning-mochi-d165de.netlify.app/#/" target="_blank">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
+          </div>
+        </li>
+
+        <li v-scrollanimation class="card">
+          <div class="card-img second">
+            <img src="../assets/boolivery2.jpg" alt="boolivery-home">
+          </div>
+          <div class="card-description second">
             <h5>Featured Project</h5>
             <h3>Boolivery</h3>
             <h5>eCommerce</h5>
@@ -20,14 +52,14 @@
               Once the order is approved, an email sending service is hosted by `Mailtrap.io`.
               A registered user can modify data of their restaurant, thanks to an easy back-office dashboard that is in communication with a relational database.
             </p>
-            <ul class="flex-row">
+            <ul class="flex-row second">
               <li>Html</li>
               <li>Scss</li>
               <li>Vue.Js</li>
               <li>Laravel</li>
               <li>mySQL</li>
             </ul>
-            <div class="link flex-row">
+            <div class="link flex-row second">
               <a href="https://github.com/stefano472/boolivery_project" target="_blank">
                 <i class="fa-brands fa-github"></i>
               </a>
@@ -39,10 +71,10 @@
         </li>
 
         <li v-scrollanimation class="card">
-          <div class="card-img second">
+          <div class="card-img">
             <img src="../assets/pet-supplies.png" alt="boolivery-home">
           </div>
-          <div class="card-description second">
+          <div class="card-description ">
             <h5>Featured Project</h5>
             <h3>Avada Pet Supplies</h3>
             <h5>Brochure Website</h5>
@@ -51,12 +83,12 @@
               Received the given instruction about how the website should look like.
               I tried to satify all the requests, paying particular attention to the final user experience.
             </p>
-            <ul class="flex-row second">
+            <ul class="flex-row ">
               <li>Html</li>
               <li>Scss</li>
               <li>Vue.Js</li>
             </ul>
-            <div class="link second flex-row">
+            <div class="link flex-row">
               <a href="https://github.com/stefano472/proj-html-vuejs" target="_blank">
                 <i class="fa-brands fa-github"></i>
               </a>
@@ -68,10 +100,10 @@
         </li>
 
         <li v-scrollanimation class="card">
-          <div class="card-img">
+          <div class="card-img second">
             <img src="../assets/boolzapp.png" alt="boolivery-home">
           </div>
-          <div class="card-description">
+          <div class="card-description second">
             <h5>Featured Project</h5>
             <h3>Boolzapp</h3>
             <h5>webApp</h5>
@@ -79,13 +111,13 @@
               A (not very) innovative messaging platform.
               One of my first project practicing with raw vue.js. with a full responsive interface in order to give to the final user the best experience.
             </p>
-            <ul class="flex-row">
+            <ul class="flex-row second">
               <li>Html</li>
               <li>Css</li>
               <li>Javascript</li>
               <li>Vue.Js</li>
             </ul>
-            <div class="link flex-row">
+            <div class="link flex-row second">
               <a href="https://github.com/stefano472/vue-boolzapp" target="_blank">
                 <i class="fa-brands fa-github"></i>
               </a>
@@ -153,6 +185,8 @@ export default {
         grid-area: 1/8/2/2;
         // grid-area: 1/8/2/1;
         img{
+          object-fit: contain;
+          max-height: 400px;
           filter: sepia(30%);
           width: 100%;
           border-radius: 3px;
